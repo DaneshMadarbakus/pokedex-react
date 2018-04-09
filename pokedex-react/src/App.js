@@ -5,7 +5,7 @@ import Header from './components/header.js';
 import Footer from './components/footer.js';
 import Home from './components/pages/home.js';
 import About from './components/pages/about.js';
-import Pokemon from './components/pages/pokemon.js';
+import Pokedex from './components/pages/pokedex.js';
 
 class App extends Component {
     render() {
@@ -15,7 +15,7 @@ class App extends Component {
                     <Header />
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
-                    <Route path="/pokemon" component={Pokemon} />
+                    <Route path="/pokedex" component={Pokedex} />
                     <Footer />
                 </div>
             </Router>

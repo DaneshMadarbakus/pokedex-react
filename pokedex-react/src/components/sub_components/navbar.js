@@ -14,7 +14,7 @@ class Navbar extends Component {
                             <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/pokemon">Pokemon</Link>
+                            <Link to="/pokedex">Pokedex</Link>
                         </li>
                     </ul>
                     <hr />
