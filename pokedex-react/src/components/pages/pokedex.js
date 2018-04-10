@@ -12,13 +12,13 @@ class Pokedex extends Component {
                 <h2>Pokemon</h2>
                 <ul>
                     <li>
-                        <Link to={`${this.props.match.url}/pokemon-red`}>Pokemon Red</Link>
+                        <Link to={`${this.props.match.url}/pokemon-generation-I`}>Pokemon Generation I</Link>
                     </li>
                     <li>
-                        <Link to={`${this.props.match.url}/pokemon-blue`}>Pokemon Blue</Link>
+                        <Link to={`${this.props.match.url}/pokemon-generation-II`}>Pokemon Generation II</Link>
                     </li>
                     <li>
-                        <Link to={`${this.props.match.url}/pokemon-yellow`}>Pokemon Yellow</Link>
+                        <Link to={`${this.props.match.url}/pokemon-generation-III`}>Pokemon Generation III</Link>
                     </li>
                 </ul>
                 <Route path={`${this.props.match.url}/:topicId`} component={Pokemon} />
