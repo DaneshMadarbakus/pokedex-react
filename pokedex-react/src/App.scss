@@ -33,3 +33,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.pokemon-holder {
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+    }
+}

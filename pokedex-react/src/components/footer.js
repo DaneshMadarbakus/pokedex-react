@@ -8,7 +8,7 @@ class Footer extends Component {
             <div className="App">
                 <header className="App-footer">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Footer React</h1>
+                    <h1 className="App-title">Pokedex React Footer</h1>
                 </header>
                 <Navbar />
             </div>
