@@ -17,7 +17,6 @@ class Navbar extends Component {
                             <Link to="/pokedex">Pokedex</Link>
                         </li>
                     </ul>
-                    <hr />
                 </div>
         )
     }

@@ -15,12 +15,18 @@ class Pokedex extends Component {
             secondType: 'None',
             pokemonList: []
         };
+        this.handleFormChange = this.handleFormChange.bind(this);
     }
+
+    handleFormChange(event) {
+        console.log(event.target.value);
+    }
+
     render() {
         return (
             <div>
                 <h2>Pokedex</h2>
-                <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} />
+                <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} />
                 <Pokemon />
             </div>
         )

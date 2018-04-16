@@ -5,13 +5,11 @@ import Navbar from './sub_components/navbar.js';
 class Footer extends Component {
     render() {
         return (
-            <div className="App">
-                <header className="App-footer">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Pokedex React Footer</h1>
-                </header>
+            <footer>
+                <img src={logo} className="App-logo" alt="logo" />
+                <h1 className="App-title">Pokedex React Footer</h1>
                 <Navbar />
-            </div>
+            </footer>
         );
     }
 }

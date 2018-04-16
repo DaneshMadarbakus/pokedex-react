@@ -5,16 +5,12 @@ class PokemonSearch extends Component {
         super(props);
     }
 
-    componentDidMount() {
-        console.log(this.props.firstType);
-    }
-
     render() {
         return (
             <form>
                 <label>
                     Generation of pokemon
-                    <select value={this.props.generation} /*onChange={this.handleChange}*/>
+                    <select value={this.props.generation} onChange={this.props.onFormChange}>
                         <option value={this.props.generation}>{this.props.generation}</option>
                         <option value="Generation 1">Generation 1</option>
                         <option value="Generation 2">Generation 2</option>
@@ -27,7 +23,7 @@ class PokemonSearch extends Component {
                 </label>
                 <label>
                     Pokemon type
-                    <select value={this.props.firstType} /*onChange={this.handleChange}*/>
+                    <select value={this.props.firstType} onChange={this.props.onFormChange}>
                         <option value="{this.props.firstType}">{this.props.firstType}</option>
                         <option value="Normal">Normal</option>
                         <option value="Fire">Fire</option>
@@ -38,7 +34,7 @@ class PokemonSearch extends Component {
                 </label>
                 <label>
                     2nd Pokemon type
-                    <select value={this.props.secondType} /*onChange={this.handleChange}*/>
+                    <select value={this.props.secondType} onChange={this.props.onFormChange}>
                         <option value="{this.props.secondType}">{this.props.secondType}</option>
                         <option value="Normal">Normal</option>
                         <option value="Fire">Fire</option>
