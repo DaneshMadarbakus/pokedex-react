@@ -10,24 +10,53 @@ class Pokedex extends Component {
             noSearchMade: true,
             error: null,
             isLoaded: false,
-            generation: 'All Generations',
+            generation: null,
             firstType: 'Not selected',
             secondType: 'None',
             pokemonList: []
         };
         this.handleFormChange = this.handleFormChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
     handleFormChange(event) {
-        console.log(event.target.value);
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleFormSubmit(e) {
+        e.preventDefault();
+        console.log('hiya');
+
+        fetch(`https://pokeapi.co/api/v2/generation/1`)
+            .then(res => res.json())
+            .then(
+            (result) => {
+                console.log(result.pokemon_species);
+                this.setState({
+                    noSearchMade: false,
+                    isLoaded: true,
+                    pokemonList: result.pokemon_species
+                });
+            },
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error: error
+                })
+            }
+            );
     }
 
     render() {
         return (
             <div>
                 <h2>Pokedex</h2>
-                <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} />
-                <Pokemon />
+                <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit} />
+                <Pokemon noSearchMade={this.state.noSearchMade} error={this.state.error} isLoaded={this.state.isLoaded} pokemonList={this.state.pokemonList} />
             </div>
         )
     }
