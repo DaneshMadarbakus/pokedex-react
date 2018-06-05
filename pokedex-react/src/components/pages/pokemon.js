@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Pokemon extends Component {
     constructor(props) {
         super(props);
-        
+        this.pokemonFunction = this.pokemonFunction.bind(this);
     }
 
-    componentDidMount() {
-        console.log('proper', this.props.pokemonList);
+    pokemonFunction (pokemon){
+      console.log(pokemon);
     }
 
     render() {
@@ -20,17 +20,22 @@ class Pokemon extends Component {
                 </div>
             )
         } else if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (isLoaded) {
-            return <div>Loading...</div>;
+        return (
+        <div>
+          <p>Error: {error.message}</p>
+        </div>
+      );
+        } else if (!isLoaded) {
+        return (<div>Loading...</div>);
         } else {
             return (
                 <div>
                     <ul>
                         {
                             pokemonList.map(pokemon => (
-                                <li key={pokemon.name} onClick={console.log('hiya')}>
-                                    {pokemon.name}
+                                <li key={pokemon.name} onClick={() => this.pokemonFunction(pokemon)}>
+                                    <p>{pokemon.name}</p>
+                                    <p>{pokemon.name}</p>
                                 </li>
                         ))}
                     </ul>

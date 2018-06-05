@@ -10,7 +10,7 @@ class Pokedex extends Component {
             noSearchMade: true,
             error: null,
             isLoaded: false,
-            generation: null,
+            generation: undefined,
             firstType: 'Not selected',
             secondType: 'None',
             pokemonList: []
@@ -22,6 +22,7 @@ class Pokedex extends Component {
     handleFormChange(event) {
         const value = event.target.value;
         const name = event.target.name;
+        console.log(value, name);
         this.setState({
             [name]: value
         });
@@ -30,14 +31,17 @@ class Pokedex extends Component {
     handleFormSubmit(e) {
         e.preventDefault();
         console.log('hiya');
-
-        fetch(`https://pokeapi.co/api/v2/generation/1`)
+        this.setState({
+          noSearchMade: false
+        });
+        const searchString = this.state.generation ? `https://pokeapi.co/api/v2/generation/${this.state.generation}` : `https://pokeapi.co/api/v2/pokemon`;
+        console.log(searchString);
+        fetch(searchString)
             .then(res => res.json())
             .then(
             (result) => {
-                console.log(result.pokemon_species);
+                console.log(result);
                 this.setState({
-                    noSearchMade: false,
                     isLoaded: true,
                     pokemonList: result.pokemon_species
                 });
@@ -55,7 +59,9 @@ class Pokedex extends Component {
         return (
             <div>
                 <h2>Pokedex</h2>
+                
                 <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit} />
+
                 <Pokemon noSearchMade={this.state.noSearchMade} error={this.state.error} isLoaded={this.state.isLoaded} pokemonList={this.state.pokemonList} />
             </div>
         )

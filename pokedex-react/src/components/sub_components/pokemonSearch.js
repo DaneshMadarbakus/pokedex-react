@@ -11,7 +11,7 @@ class PokemonSearch extends Component {
                 <label>
                     Generation of pokemon
                     <select name="generation" value={this.props.generation} onChange={this.props.onFormChange}>
-                        <option value={null}>All</option>
+                        <option value={false}>All</option>
                         <option value="1">Generation 1</option>
                         <option value="2">Generation 2</option>
                         <option value="3">Generation 3</option>
@@ -24,7 +24,7 @@ class PokemonSearch extends Component {
                 <label>
                     Pokemon type
                     <select name="firstType" value={this.props.firstType} onChange={this.props.onFormChange}>
-                        <option value={null}>Not Selected</option>
+                        <option value={false}>Not Selected</option>
                         <option value="Normal">Normal</option>
                         <option value="Fire">Fire</option>
                         <option value="Water">Water</option>
@@ -35,7 +35,7 @@ class PokemonSearch extends Component {
                 <label>
                     2nd Pokemon type
                     <select name="secondType" value={this.props.secondType} onChange={this.props.onFormChange}>
-                        <option value={null}>None</option>
+                        <option value={false}>None</option>
                         <option value="Normal">Normal</option>
                         <option value="Fire">Fire</option>
                         <option value="Water">Water</option>
