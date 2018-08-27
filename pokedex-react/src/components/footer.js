@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
-import Navbar from './sub_components/navbar.js';
 
 class Footer extends Component {
     render() {
         return (
             <footer>
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1 className="App-title">Pokedex React Footer</h1>
-                <Navbar />
+              <div className="container text-center">
+                <p>Created by <a href="https://github.com/DaneshMadarbakus">Danesh Madarbakus</a></p>
+              </div>
             </footer>
         );
     }

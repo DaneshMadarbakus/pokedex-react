@@ -1,0 +1,35 @@
+header{
+  text-align: center;
+  box-shadow: -8px 16px 15px rgba(0,0,0,.13);
+  padding:0.25rem 0;
+
+  .nav-container{
+    display:flex;
+    justify-content: space-between;
+
+    img{
+      height:50px;
+    }
+  }
+  
+  .navbar{
+    ul{
+      list-style-type: none;
+      padding:0;
+      height:100%;
+      margin:0;
+      display:flex;
+
+      li{
+        padding:0 1rem;
+        display:flex;
+
+        a{
+          text-transform: uppercase;
+          display:flex;
+          align-items: center; 
+        }
+      }
+    }
+  }
+}

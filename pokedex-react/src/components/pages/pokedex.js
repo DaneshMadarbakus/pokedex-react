@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Pokemon from './pokemon.js';
+import Pokemon from '../sub_components/pokemon.js';
 import PokemonSearch from '../sub_components/pokemonSearch.js';
 
 class Pokedex extends Component {
@@ -57,13 +57,15 @@ class Pokedex extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Pokedex</h2>
-                
-                <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit} />
+            <section className="pokedex">
+                <h1>Pokedex</h1>
 
-                <Pokemon noSearchMade={this.state.noSearchMade} error={this.state.error} isLoaded={this.state.isLoaded} pokemonList={this.state.pokemonList} />
-            </div>
+                <div className="left-content">
+                  <PokemonSearch generation={this.state.generation} firstType={this.state.firstType} secondType={this.state.secondType} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit} />
+
+                  <Pokemon noSearchMade={this.state.noSearchMade} error={this.state.error} isLoaded={this.state.isLoaded} pokemonList={this.state.pokemonList} />
+                </div>
+            </section>
         )
     }
 }

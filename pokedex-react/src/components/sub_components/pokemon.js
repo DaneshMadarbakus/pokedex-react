@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 class Pokemon extends Component {
     constructor(props) {
@@ -29,16 +29,17 @@ class Pokemon extends Component {
         return (<div>Loading...</div>);
         } else {
             return (
-                <div>
-                    <ul>
+                <div className="row">
                         {
                             pokemonList.map(pokemon => (
-                                <li key={pokemon.name} onClick={() => this.pokemonFunction(pokemon)}>
+                                <div className="col-sm-4 col-md-3" key={pokemon.name} onClick={() => this.pokemonFunction(pokemon)}>
+                                  <Link to="/">
                                     <p>{pokemon.name}</p>
                                     <p>{pokemon.name}</p>
-                                </li>
+                                  </Link>
+                                </div>
                         ))}
-                    </ul>
+
                 </div>
 
             )

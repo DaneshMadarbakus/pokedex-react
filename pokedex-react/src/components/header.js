@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
+import { BrowserRouter as Link } from "react-router-dom";
 import Navbar from './sub_components/navbar.js';
 
 class Header extends Component {
     render() {
         return (
-            <div className="header">
-                <header>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1>Pokedex React</h1>
-                    <p>
-                        gotta catch em all
-                    </p>
-                </header>
-                <Navbar />
+          <header>
+            <div className="container nav-container">
+              <Link to="/"><img src="https://static.giantbomb.com/uploads/scale_medium/0/6087/2437349-pikachu.png" alt="logo" /></Link>
+              <Navbar />
             </div>
+          </header>
         );
     }
 }

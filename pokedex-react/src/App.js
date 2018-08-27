@@ -13,9 +13,11 @@ class App extends Component {
             <Router>
                 <div>
                     <Header />
-                    <Route exact path="/" component={Home} />
-                    <Route path="/about" component={About} />
-                    <Route path="/pokedex" component={Pokedex} />
+                    <main className="container">
+                      <Route exact path="/" component={Home} />
+                      <Route path="/about" component={About} />
+                      <Route path="/pokedex" component={Pokedex} />
+                    </main>
                     <Footer />
                 </div>
             </Router>

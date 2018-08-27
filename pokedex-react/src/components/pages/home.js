@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Home = () => (
-    <div>
-        <h2>Home</h2>
-        <img src="https://i1.wp.com/kwinnpop.com/wp-content/uploads/2018/01/Pokemon-Red.png" />
-    </div>
+    <section className="home">
+      <h1>Pokedex React</h1>
+      <p className="tagline">
+          Gotta catch 'em all
+      </p>
+
+      <p>Navigate through and learn more about your favourite Pokemon!</p>
+    </section>
 );
 
 export default Home;

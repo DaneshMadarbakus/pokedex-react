@@ -1,38 +1,14 @@
-.App {
-  text-align: center;
-}
+@import "styles/bootstrap4.1.3/bootstrap-reboot";
+@import "styles/bootstrap4.1.3/bootstrap-grid";
+@import "styles/family";
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+@import "styles/settings";
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-footer {
-    background-color: #ff02fa;
-    height: 150px;
-    padding: 20px;
-    color: black;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+@import "styles/layout/header";
+@import "styles/layout/footer";
+@import "styles/layout/home";
+@import "styles/layout/about";
+@import "styles/layout/pokedex";
 
 .pokemon-holder {
     img {
