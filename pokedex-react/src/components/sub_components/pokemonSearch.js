@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class PokemonSearch extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -11,7 +8,6 @@ class PokemonSearch extends Component {
                 <label>
                     Generation of pokemon
                     <select name="generation" value={this.props.generation} onChange={this.props.onFormChange}>
-                        <option value={false}>All</option>
                         <option value="1">Generation 1</option>
                         <option value="2">Generation 2</option>
                         <option value="3">Generation 3</option>
@@ -21,7 +17,7 @@ class PokemonSearch extends Component {
                         <option value="7">Generation 7</option>
                     </select>
                 </label>
-                <label>
+                {/* <label>
                     Pokemon type
                     <select name="firstType" value={this.props.firstType} onChange={this.props.onFormChange}>
                         <option value={false}>Not Selected</option>
@@ -31,8 +27,8 @@ class PokemonSearch extends Component {
                         <option value="Grass">Grass</option>
                         <option value="Electric">Electric</option>
                     </select>
-                </label>
-                <label>
+                </label> */}
+                {/* <label>
                     2nd Pokemon type
                     <select name="secondType" value={this.props.secondType} onChange={this.props.onFormChange}>
                         <option value={false}>None</option>
@@ -42,7 +38,7 @@ class PokemonSearch extends Component {
                         <option value="Grass">Grass</option>
                         <option value="Electric">Electric</option>
                     </select>
-                </label>
+                </label> */}
                 <input type="submit" value="Submit" />
             </form>
         )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Pokemon from '../sub_components/pokemon.js';
 import PokemonSearch from '../sub_components/pokemonSearch.js';
 
@@ -10,7 +10,7 @@ class Pokedex extends Component {
             noSearchMade: true,
             error: null,
             isLoaded: false,
-            generation: undefined,
+            generation: 1,
             firstType: 'Not selected',
             secondType: 'None',
             pokemonList: []
@@ -22,7 +22,7 @@ class Pokedex extends Component {
     handleFormChange(event) {
         const value = event.target.value;
         const name = event.target.name;
-        console.log(value, name);
+
         this.setState({
             [name]: value
         });
@@ -30,20 +30,21 @@ class Pokedex extends Component {
 
     handleFormSubmit(e) {
         e.preventDefault();
-        console.log('hiya');
+ 
         this.setState({
           noSearchMade: false
         });
-        const searchString = this.state.generation ? `https://pokeapi.co/api/v2/generation/${this.state.generation}` : `https://pokeapi.co/api/v2/pokemon`;
-        console.log(searchString);
+        // const searchString = this.state.generation ? `https://pokeapi.co/api/v2/generation/${this.state.generation}` : `https://pokeapi.co/api/v2/pokemon`;
+        const searchString = `https://pokeapi.co/api/v2/generation/${this.state.generation}`;
+
         fetch(searchString)
             .then(res => res.json())
             .then(
             (result) => {
-                console.log(result);
+                // console.log(result);
                 this.setState({
                     isLoaded: true,
-                    pokemonList: result.pokemon_species
+                    pokemonList: result.pokemon_species.reverse()
                 });
             },
             (error) => {
@@ -52,7 +53,7 @@ class Pokedex extends Component {
                     error: error
                 })
             }
-            );
+          );
     }
 
     render() {

@@ -9,12 +9,4 @@
 @import "styles/layout/home";
 @import "styles/layout/about";
 @import "styles/layout/pokedex";
-
-.pokemon-holder {
-    img {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 300px;
-    }
-}
+@import "styles/layout/singlepokemon";
