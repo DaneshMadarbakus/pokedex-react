@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 class Pokemon extends Component {
     constructor(props) {
         super(props);
-        // this.pokemonFunction = this.pokemonFunction.bind(this);
+        this.pokemonFunction = this.pokemonFunction.bind(this);
     }
 
-    // pokemonFunction (pokemon){
-    //   console.log(pokemon);
-    // }
+    pokemonFunction (pokemon){
+      console.log(pokemon);
+    }
 
     render() {
         const { noSearchMade, error, isLoaded, pokemonList } = this.props;
