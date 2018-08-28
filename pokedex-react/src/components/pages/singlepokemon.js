@@ -56,7 +56,7 @@ class SinglePokemon extends Component {
           this.setState({
               nextPokemon: result.name
           });
-          console.log(this.state);
+          // console.log(this.state);
       });
     }
 
@@ -68,7 +68,7 @@ class SinglePokemon extends Component {
           this.setState({
               previousPokemon: result.name
           });
-          console.log(this.state);
+          // console.log(this.state);
       });
     }
 

@@ -16,7 +16,7 @@ const About = () => (
             <li>Add functionality to allow users to find pokemon to counter specific pokemon types in battle through each generation.</li>
             <li>Review component structure in project and look into using smaller reusable chunks (look at common component compositions in react projects/consider atomic design pattern)</li>
             <li>Build styling using individual scss files for each react component.</li>
-            <li>Create node api with seeded pokemon data from the pokemon api to make calls to.</li>
+            <li>Create node api with seeded pokemon data from the pokemon api to make calls to as current api can be slow at times or even timeout and return errors.</li>
             <li>Remove bootstrap grid system and use a bespoke <i>grid-layout</i> grid system (Nice to have - not essential).</li>
             <li>Rethink design and styling scheme (Nice to have - not essential).</li>
           </ul>
