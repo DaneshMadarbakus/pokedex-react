@@ -77,7 +77,7 @@ class SinglePokemon extends Component {
           if (this.state.pokemonInfo) {
             return (
             <section className="single-pokemon">
-                <h1>{this.props.match.params.pokemon}, id: </h1>
+                <h1>{this.props.match.params.pokemon}</h1>
                 <img src={this.state.pokemonInfo.sprites.front_default} alt="pokemon image" />
                 <p>Pokemon id: {this.state.pokemonInfo.id}</p>
                 <div className="next-previous">

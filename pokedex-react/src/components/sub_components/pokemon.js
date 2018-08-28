@@ -32,7 +32,7 @@ class Pokemon extends Component {
                 <div className="row">
                         {
                             pokemonList.map(pokemon => (
-                                <div className="col-6 col-sm-4 col-md-3" key={pokemon.name} onClick={() => this.pokemonFunction(pokemon)}>
+                                <div className="col-6 col-sm-4 col-md-3" key={pokemon.name}>
                                   <Link to={`/pokedex/${pokemon.name}`}>
                                     <p>{pokemon.name}</p>
                                   </Link>
