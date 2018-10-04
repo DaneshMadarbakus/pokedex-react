@@ -1,0 +1,14 @@
+.pokedex{
+  text-align: center;
+  
+  h1{
+    color: $secondary-color;
+  }
+  form{
+    margin-bottom: 1rem;
+  }
+  label{
+    display:block;
+    margin-bottom:1rem;
+  }
+}

@@ -1,0 +1,32 @@
+$primary-color: #da1334;
+$secondary-color: #33acfa;
+$tertiary-color: #55ad62; 
+$black: #000;
+$white: #fff;
+
+body {
+  background: #f9f9f9;
+}
+
+main{
+  padding: 3rem 0;
+  min-height:calc(100vh - 104px);
+}
+
+h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+a{
+  color: $primary-color;
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+    color: $tertiary-color;
+  }
+}
+
+.left-content{
+  text-align: left;
+}
